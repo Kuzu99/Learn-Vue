@@ -4,7 +4,7 @@
 - Options APIとComposition API
 - など学ぶためにコードをまとめるリポジトリ
 
-# 環境構築
+# 本環境を作った手順
 
 1. VueCLIのInstall
 ```
@@ -20,5 +20,12 @@ $ vue create vue2-introduction
 3. localhostにサーバーを立てる
 ```
 $ cd vue2-introduction
+$ yarn serve
+```
+
+# 環境構築手順
+
+```
+$ yarn
 $ yarn serve
 ```
