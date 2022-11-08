@@ -1,19 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld parentData="parentDataString" @execEmit="getExecEmit" />
+    <div>
+      <h3>受け取ったデータを親から見る</h3>
+      <p>{{ childData }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+
+  data() {
+    return {
+      childData: "",
+    };
+  },
+
+  methods: {
+    getExecEmit(getChildData) {
+      this.childData = getChildData;
+    },
+  },
+};
 </script>
 
 <style>
@@ -21,7 +36,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
   margin-top: 60px;
 }
