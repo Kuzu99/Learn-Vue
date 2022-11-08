@@ -5,16 +5,19 @@
       <h3>受け取ったデータを親から見る</h3>
       <p>{{ childData }}</p>
     </div>
+    <DirectiveSyntax />
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import DirectiveSyntax from "./components/DirectiveSyntax.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
+    DirectiveSyntax,
   },
 
   data() {
